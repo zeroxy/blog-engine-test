@@ -16,7 +16,9 @@ angular.module('blog',['ngRoute'])
 	$scope.test = 'asdf';
 	$scope.menu = list;
 }).directive('blogmenu', function(){
-	return {template:'<ul><li ng-repeat="menu in menu"><a href="#{{$index}}">{{menu.title|nonamed}}</a></li></ul>', restrict:'E', replace: true}
+	return {templateUrl:'menu.html', restrict:'A', replace: true}
+}).directive('portrait', function(){
+	return {templateUrl:'portrait.html', restrict:'A', replace: true}
 });
 </script>
 
@@ -29,8 +31,8 @@ angular.module('blog',['ngRoute'])
 	</div>
 	<div class="row">
 		<div class="col-md-2 col-md-offset-1">
-			<div class="row">자기소개 시이자악</div>
-			<div class="row"><blogmenu/></div>
+			<div class="row" portrait></div>
+			<div class="row" blogmenu></div>
 			
 		</div>
 		<div class="col-md-7" ng-view></div>
