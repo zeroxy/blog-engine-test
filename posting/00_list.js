@@ -1,5 +1,5 @@
 ﻿var list = [
-'github_blog_making.html'
-,'bootstrap_doc_xxx.html'
+{file:'github_blog_making.html', tag:'github blog hobby gitpage make'}
+,{file:'bootstrap_doc_xxx.html', tag:'bootstrap xxx document make'}
 
 ].reverse();

@@ -4,14 +4,13 @@ angular.module('blog',['ngRoute'])
 	return function(input){return (input == undefined || input == null)?'no-named':input;}
 }).config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 	$routeProvider
-	.when('/', {templateUrl:'posting/'+list[0], controller:'blogC'})
+	.when('/', {templateUrl:'posting/'+list[0].file, controller:'blogC'})
 	.when('/menu/bloglist', {templateUrl:'partial/menu.html', controller:'blogC'})
 	.otherwise({ redirectTo: '/'});
 	for(var i in list){
-		$routeProvider.when('/'+list[i].substring(0,list[i].lastIndexOf('.')), {templateUrl:'posting/'+list[i], controller:'blogC'});
+		$routeProvider.when('/'+list[i].file.substring(0,list[i].file.lastIndexOf('.')), {templateUrl:'posting/'+list[i].file, controller:'blogC'});
 	}
 }]).controller('blogC', function($scope){
-	$scope.test = 'asdf';
 	$scope.menu = list;
 }).directive('blogmenu', function(){
 	return {
