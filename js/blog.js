@@ -3,9 +3,9 @@ angular.module('blog',['ngRoute'])
 	return function(input){return (input == undefined || input == null)?'no-named':input;}
 }).config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 	$routeProvider
-	.when('/', {templateUrl:'posting/'+list[list.length-1], controller:'blogC'})
+	.when('/', {templateUrl:'posting/'+list[0], controller:'blogC'})
 	.when('/menu/bloglist', {templateUrl:'partial/menu.html', controller:'blogC'})
-	.otherwise({ redirectTo: '/'+list[list.length-1].substring(0,list[list.length-1].lastIndexOf('.')) });
+	.otherwise({ redirectTo: '/'});
 	for(var i in list){
 		$routeProvider.when('/'+list[i].substring(0,list[i].lastIndexOf('.')), {templateUrl:'posting/'+list[i], controller:'blogC'});
 	}
@@ -28,8 +28,3 @@ angular.module('blog',['ngRoute'])
 		, restrict:'E'
 	}
 });
-
-var list = [
-'github_blog_making.html'
-,'bootstrap_doc_xxx.html'
-];
