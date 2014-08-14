@@ -1,1 +1,1 @@
-<ul><li ng-repeat="menu in menu"><a href="#{{$index}}">{{menu.title|nonamed}}</a></li></ul>
+<ul><li ng-repeat="menu in menu"><a href="#{{menu.substring(0,menu.lastIndexOf('.'))}}">{{menu.substring(0,menu.lastIndexOf('.'))|nonamed}}</a></li></ul>

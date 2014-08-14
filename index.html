@@ -5,23 +5,6 @@
 <script src="/js/blog.js"></script>
 <script src="/js/jquery-2.1.1.js"></script>
 <script src="/js/bootstrap.min.js"></script>
-<script lang="javascript">
-angular.module('blog',['ngRoute'])
-.filter('nonamed', function(){
-	return function(input){return (input == undefined || input == null)?'no-named':input;}
-}).config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
-	$routeProvider.when('/', {templateUrl:'posting/'+list[0]['filename'], controller:'blogC'}).otherwise({ redirectTo: '/'});
-	for(var i in list){$routeProvider.when('/'+i, {templateUrl:'posting/'+list[i]['filename'], controller:'blogC'});}
-}]).controller('blogC', function($scope){
-	$scope.test = 'asdf';
-	$scope.menu = list;
-}).directive('blogmenu', function(){
-	return {templateUrl:'menu.html', restrict:'A', replace: true}
-}).directive('portrait', function(){
-	return {templateUrl:'portrait.html', restrict:'A', replace: true}
-});
-</script>
-
 <link href="/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body ng-controller="blogC">
@@ -31,11 +14,17 @@ angular.module('blog',['ngRoute'])
 	</div>
 	<div class="row">
 		<div class="col-md-2 col-md-offset-1">
-			<div class="row" portrait></div>
-			<div class="row" blogmenu></div>
+			<div class="row">
+				<introduction/>
+			</div>
+			<div class="row">
+				<blogmenu/>
+			</div>
 			
 		</div>
-		<div class="col-md-7" ng-view></div>
+		<div class="col-md-7">
+			<ng-view/>
+		</div>
 	</div>
 </div>
 </body>
