@@ -24,8 +24,5 @@ angular.module('blog',['ngRoute'])
 });
 
 var list = [
-'a1.html',
-'a2.html',
-'a3.html',
-'a4.html'
+'github_blog_making.html'
 ];
