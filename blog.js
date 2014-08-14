@@ -13,12 +13,17 @@ angular.module('blog',['ngRoute'])
 	$scope.menu = list;
 }).directive('blogmenu', function(){
 	return {
-		templateUrl:'menu.html'
+		templateUrl:'partial/menu.html'
 		, restrict:'E'
 	}
 }).directive('introduction', function(){
 	return {
-		templateUrl:'introduction.html'
+		templateUrl:'partial/introduction.html'
+		, restrict:'E'
+	}
+}).directive('blognavbar', function(){
+	return {
+		templateUrl:'partial/blognavbar.html'
 		, restrict:'E'
 	}
 });
