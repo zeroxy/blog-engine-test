@@ -27,4 +27,12 @@ angular.module('blog',['ngRoute'])
 		templateUrl:'partial/blognavbar.html'
 		, restrict:'E'
 	}
+}).directive('markdown', function(){
+	var converter = new Showdown.converter();
+	return {
+		restrict:'E',
+		link: function (scope, element, attrs){
+			element.html( converter.makeHtml( element.text() ) );
+		}
+	};
 });
