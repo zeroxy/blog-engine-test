@@ -13,9 +13,8 @@
  
 하는 고민들이 ___줄줄이 비엔나___ 처럼 나오는데..
 
-![줄줄이비엔나](http://www.w-market.co.kr/data/file/world_popular/3695991576_8c58c1d0_68.jpg)
-
-<small>(*배가 고프다.. 오늘 점심은 꼭 족발 골뱅이 비빔국수 먹어야지*)</small>
+![줄줄이비엔나](http://www.w-market.co.kr/data/file/world_popular/3695991576_8c58c1d0_68.jpg)  
+( *배가 고프다.. 오늘 점심은 꼭 족발 골뱅이 비빔국수 먹어야지* )
 
 jekyll 은 루비 설치 때문에 싫어서, 하루패드는 node-gyp 의 버전업 때문에 충돌나서 지금껄 만드는건데..
 
