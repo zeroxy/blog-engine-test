@@ -5,4 +5,5 @@
 ,{file:'markdown.md',tag:'markdown'}
 ,{file:'olleh.md',tag:'markdown 마크다운 성공 개인project'}
 ,{file:'TodoList.md',tag:'hobby blog 엔진 만들기 정책 머리아파'}
+,{file:'chromium_fail.md',tag:'chromium 크로미움 크롬 빌드 실패 build fail'}
 ].reverse();
